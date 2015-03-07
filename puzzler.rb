@@ -34,7 +34,7 @@ module Puzzle
     end
     
     def make_regex string
-      Regexp.new(string.downcase.split("").map {|x| if x.match /[a-z]/ then x else '.' end}.join)
+      Regexp.new(string.downcase.split("").map {|x| if x.match /[a-z]|-/ then x else '.' end}.join)
     end    
   end
   
