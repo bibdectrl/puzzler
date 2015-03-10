@@ -20246,7 +20246,6 @@ dyewood
 dying
 dying(a)
 dyirbal
-dyke
 dylan
 dynamic
 dynamical
@@ -23145,12 +23144,10 @@ fading
 faeces
 faedera
 faenum
-fag
 fagaceae
 fagales
 fagend
 fagging
-faggot
 fagin
 fagopyrum
 fagot
@@ -41664,7 +41661,6 @@ nigerian
 nigerien
 niggard
 niggardly
-nigger
 niggle
 niggling
 nigh
