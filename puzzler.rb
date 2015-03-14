@@ -9,7 +9,8 @@ module Puzzle
     word_file.each do |line|
       word = line.chomp
       if word.length <= max_length and word.length > 0
-        dict[word.length].push word
+        word_length = word.length - word.count("-")
+        dict[word_length].push word
       end
     end
     return dict
@@ -21,7 +22,8 @@ module Puzzle
     attr_accessor :matches
     def initialize target
       regex = make_regex target
-      @matches = get_matches WORD_DICT[target.length], regex
+      target_length = target.length - target.count("-")
+      @matches = get_matches WORD_DICT[target_length], regex
     end
     
     def get_matches(words, regex)
