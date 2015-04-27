@@ -1,23 +1,52 @@
 !!!5
 :css
   body {
-    background-color : #FFCC99;
+    background-color : #E2E2E2;
     text-align: center;
   }
 
-  h1 {
-    color : #003366;
-  }
 
   li {
-    color : #003366;
+    list-style: none;
     font-family : "garamond";
+    font-size: 1.2em;
+    padding: 3px;
   }
+
+  li:hover{
+    font-size: 2.0em;
+
+  }
+
+  .container {
+    padding: 15px;
+    margin-left: 35%;
+    margin-right: 35%;
+    border: 1px solid black;;
+    border-radius: 15px;;
+    background-color: #868686;
+
+  }
+
+  .tip {
+    font-size:0.8em;
+
+  }
+
+  .word {
+    text-align: right;
+    margin-right: 40%;
+  }
+
 %head
   %title
     Puzzler
-%h1 Puzzler
-%p Enter partial word
-%form{:action => '/results/', :method=>'GET'} 
-  %input{:type => 'text', :name => 'word'}
-  %button{:type => 'submit'}search
+%body
+  .container
+    %h1 Puzzler
+    %p Enter partial word
+    .tip 
+      %p (use underscores to signify blanks)
+    %form{:action => '/results/', :method=>'GET'} 
+      %input{:type => 'text', :name => 'word'}
+      %button{:type => 'submit'}search

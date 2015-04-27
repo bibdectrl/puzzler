@@ -2,7 +2,8 @@
 
 = haml :index
 
-%li
+%ul
   -@puzzler.matches.each do |word|
-    %ul=word 
+    .word
+      %li=word 
 
