@@ -44,23 +44,26 @@ end
 
 
 require 'sinatra'
-require 'haml'
-
+require 'json'
 
 get '/' do
 
-  haml :index
+  erb :index
 
 end
 
 get '/results/?:word?' do
   word = params[:word]
-  if word == ""
-      haml :index  
-  else    
-      @puzzler = Puzzle::Puzzler.new word
-      haml :results
-  end
+  @puzzler = Puzzle::Puzzler.new word
+end
+
+require 'json'
+
+get '/api/results/?:word?' do
+  word = params[:word]
+  results = Puzzle::Puzzler.new word
+  content_type :json
+  { "results" => results.matches }.to_json                                                                                                                                                          
 end
 
 

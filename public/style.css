@@ -1,0 +1,27 @@
+header {
+    height: 10 px;
+    background-color: black;
+    color: gold;
+}
+
+.header {
+    font-family: "Lora";
+    text-transform: uppercase;
+
+}
+
+#search-box {
+    text-align: center;
+    font-family: "Lora";
+}
+
+#results-area {
+    background-color: lightgray;
+
+}
+
+#results {
+    list-style: none;
+    text-align: center;
+    font-family: "Lora";
+}
