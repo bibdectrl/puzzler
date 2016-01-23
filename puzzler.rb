@@ -46,6 +46,9 @@ end
 require 'sinatra'
 require 'json'
 
+set :bind, '0.0.0.0'
+set :port, 8000
+
 get '/' do
 
   erb :index

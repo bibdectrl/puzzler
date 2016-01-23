@@ -12,6 +12,7 @@
     <div id="search-box">
       <h1 class="header">Puzzler</h1>
       <input type="text" placeholder="Enter word fragment..." id="search"></input>
+      <button class="button-primary" id="search-button">SEARCH</button>
     </div>
   </header>
   <div id="results-area">
@@ -24,7 +25,7 @@
 
 <script type="text/javascript">
   $(document).ready(function(){
-    $("#search").keyup(function(){
+    $("#search-button").click(function(){
       $("#results").empty();
       var w = $("#search").val();
       if (w.length > 0){
